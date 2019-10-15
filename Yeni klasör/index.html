@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Saat Modelleri | Saat Alışverişi ve Fiyatları için Konyalı Saat</title>
+      <link href="style.css" type="text/css" rel="stylesheet"/>
+   </head>	
+   <body>
+         <div class="custom-padding">
+               <nav>
+                 <div class="logo"><img src="logo.png" alt ="logo" /></div>
+             
+                 <ul class="menu-area">
+                   <li><a href="#">ERKEK SAAT</a></li>
+                   <li><a href="#">KADIN SAAT</a></li>  
+                   <li><a href="#">GÖZLÜK</a></li>
+                   <li><a href="#">MARKALAR</a></li>
+                   <li><a href="#">TEŞHİR</a></li>
+                 </ul>
+               </nav>
+             </div>
+      <div id="slider">
+            
+           <div class="slayt"><img src="slider1.jpg" alt ="1.slide" /></div>
+           <div class="slayt"><img src="slider2.jpg" alt ="2.slide" /></div>
+           <div class="slayt"><img src="slider3.jpg" alt ="3.slide" /></div>
+           <div class="slayt"><img src="slider4.jpg" alt ="4.slide" /></div>
+           <div id="kontrol">
+             <a href="javascript:oncekiSlayt()">Önceki</a>
+             <a href="javascript:sonrakiSlayt()">Sonraki</a>
+           </div>
+       
+         </div>
+         <script>
+            "use strict";
+              var _slayt = document.getElementsByClassName("slayt");
+              var slaytSayisi = _slayt.length;
+              var slaytNo = 0;
+              var i = 0;
+            
+              slaytGoster(slaytNo);
+            
+              function sonrakiSlayt() {
+                slaytNo++;
+                slaytGoster(slaytNo);
+              }
+            
+              function oncekiSlayt() {
+                slaytNo--;
+                slaytGoster(slaytNo);
+              }
+            
+              function slaytGoster(slaytNumarasi) {
+                slaytNo = slaytNumarasi;
+            
+                if (slaytNumarasi >= slaytSayisi) slaytNo = 0;
+            
+                if (slaytNumarasi < 0) slaytNo = slaytSayisi - 1;
+            
+                for (i = 0; i < slaytSayisi; i++) {
+                  _slayt[i].style.display = "none";
+                }
+            
+                _slayt[slaytNo].style.display = "block";
+            
+              }
+            </script>
+
+            <table>
+              <tr>
+                <td><img src ="foto1.jpg"> </td>
+                <td><img src ="foto2.jpg"> </td>
+              </tr>
+              <tr>
+                  <td><img src ="foto3.jpg"> </td>
+                  <td><img src ="foto4.jpg"> </td>
+                </tr>
+                <tr>
+                    <th><h2>SIZIN ICIN ONERILEN URUNLER</h2>
+                        <style>
+                          
+                          
+
+                            p.serif {
+                                font-family: "Times New Roman", Times, serif;
+                            }
+                
+                        p.sansserif {
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+
+                
+                        </style>
+                    </th>
+                  </tr>
+            </table>
+            <table>
+                  <tr>
+                      <td><img src ="marka1.jpg"> </td>
+                      <td><img src ="marka2.jpg"> </td>
+                      <td><img src ="marka3.jpg"> </td>
+                      <td><img src ="marka4.jpg"> </td>
+                    </tr>
+                    
+
+
+
+            <tr>
+            
+            <div class="slider">
+                <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+                <script type="text/javascript">
+            
+                  var resim="r";
+            
+                  $(function(){
+            
+                    $("#sag,#sol").click(function(){
+            
+                      if(resim=="r"){
+            
+                        var sayi=1;
+            
+                        $(".slider_resim").each(function(){
+            
+                          var index=$(this).index()+1;
+            
+                          var left=(-200*index)+"px";
+            
+                          var saniye=400*index;
+            
+                            $(this).html('<img src="l'+sayi+'.jpg"/>');
+            
+                            $(this).children("img").css("left",left).animate({"left":"0"},saniye);
+            
+                            sayi++; resim="l";
+            
+                        })
+            
+                      }else{
+            
+                        var sayi=1;
+            
+                        $(".slider_resim").each(function(){
+            
+                          var index=$(this).index()+1;
+            
+                          var left=(-200*index)+"px";
+            
+                          var saniye=400*index;
+            
+                            $(this).html('<img src="r'+sayi+'.jpg"/>');
+            
+                            $(this).children("img").css("left",left).animate({"left":"0"},saniye);
+            
+                            sayi++; resim="r";
+            
+                        });
+            
+                      }
+            
+                    })
+            
+                  })
+            
+                  $("#sag,#sol").click(function(){
+            
+                    alert("sdsads")
+            
+                  })
+            
+                </script>
+            
+                <style type="text/css">
+            
+                  *{padding:0;margin:0;border:0;}
+            
+                  body{background:#f1f1f1;}
+            
+                  .slider{width:800px;height:300px;margin:auto;position:relative;margin-top:100px;}
+            
+                  .slider_resim{width:200px;height:300px;float:left;position:relative;overflow:hidden;}
+            
+                  .slider_resim img{width:200px;height:300px;position:absolute;}
+            
+                  .kesik{width:800px;height:300px;position:absolute;top:0;left:0;background-image:url(kesik.png);background-size:800px 300px;background-repeat:no-repeat;z-index:10;}
+            
+                  .bsag{width:50px;height:22px;padding:2px;position:absolute;right:-60px;top:125px;background:#ddd;text-align:center;cursor:pointer;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-o-border-radius:16px;}
+            
+                  .bsol{width:50px;height:22px;padding:2px;position:absolute;left:-60px;top:125px;background:#ddd;text-align:center;cursor:pointer;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-o-border-radius:16px;}
+            
+                  .bsol:hover,.bsag:hover{background:#ff0040;color:#f1f1f1;}
+            
+                  .temiz{clear:both;}
+            
+                </style>
+            
+           
+            
+          
+              
+
+                <div class="slider_resim"><img src="r1.jpg" /></div>
+              
+                <div class="slider_resim"><img src="r2.jpg"/></div>
+              
+                <div class="slider_resim"><img src="r3.jpg" /></div>
+              
+                <div class="slider_resim"><img src="r4.jpg"  /></div>
+
+            
+              
+                <div class="bsag" id="sag">İleri</div>
+              
+                <div class="bsol" id="sol">Geri</div>
+              
+                
+              
+                <div class="temiz"></div>
+              
+              </div>
+            </tr>
+                  <tr>
+                      <td><img src ="marka1.jpg"> </td>
+                      <td><img src ="marka2.jpg"> </td>
+                      <td><img src ="marka3.jpg"> </td>                      
+                  </tr>
+                  <tr>
+                      <td><img src ="marka4.jpg"> </td>
+                      <td><img src ="marka5.jpg"> </td>
+                      <td><img src ="marka6.jpg"> </td>                      
+                  </tr>
+                  <tr>
+                      <td><img src ="marka7.jpg"> </td>
+                      <td><img src ="marka8.jpg"> </td>
+                      <td><img src ="marka9.jpg"> </td>                      
+                  </tr>
+                  <tr>
+                      <td><img src ="marka10.jpg"> </td>
+                      <td><img src ="marka11.jpg"> </td>
+                      <td><img src ="marka12.jpg"> </td>                      
+                  </tr>
+                 
+              </table>
+              <h1>Saat</h1>
+              <h2>İşlevsel özelliklere sahip olan saatler aynı zamanda erkeklerin ve kadınların stillerini de tamamlayabilecekleri en önemli aksesuarlar arasında yer almaktadır. Tarzınızı yansıtabileceğiniz saat modelleri arasında her kişinin yaşına ve zevkine uygun olabilecek saat modelleri bulunuyor.
+
+                  Farklı saat markalarının ve modellerinin yer aldığı online alışveriş mağazamızda fiyat aralıkları, kasa tipi, cam şekli, alarm, kordon ve çalışma tipi gibi özelliklere göre aramalar yaparak aradığınız saatlere daha hızlı bir şekilde ulaşabilirsiniz.</h2>
+              <h1>Saat Fiyatlari</h1>
+              <h2>Giyim stilinize uyum sağlayabilecek ve giydiğiniz her kıyafet ile eşsiz bir bütünlük yakalayabilecek saatler gündelik kullanıma uygun olan saatlerdir. Aynı zamanda özel gün ve davetlere de uyumlu olabilen saat modelleri ile girdiğiniz her ortamda şık stiliniz ile ön plana çıkmayı başarabilirsiniz.
+
+                  Dünyaca ünlü saat markaları tarafından tasarlanan saatlerin yer aldığı ürün yelpazemiz son derece geniş bir seçeneğe sahiptir. Özgür bir şekilde ihtiyaçlarınıza ve stilinize uyumlu olabilecek saatleri inceleyerek sizler de kendinize en uygun olan saatlere sahip olabilirsiniz.</h2>
+                <h1>Saat markalari</h1>
+                <h2>Spor, klasik ve alternatif giyim stillerine uyum sağlayabilen birbirinden özgün saat modellerinin yer aldığı ürün kategorilerimizde erkekler ve kadınlar için ayrı ayrı özel olarak tasarlanan ürünler de yer almaktadır. Değişik tarzlara hitap edebilecek olan tasarımlar kullanıcılara zengin seçenekler sunmaktadır.
+
+                    Zamansız tasarımlara sahip olan saatler arasında her mevsim kullanılabilecek ve kıyafetleriniz ile uyum sağlayabilecek olan saat modelleri bulunmaktadır. Farklı boyutlarda tasarlanan ve modaya uyumlu olabilecek şekilde dizayn edilerek sizlere sunulan saat modelleri spor ve günlük kullanım için ayrı, klasik ve şık ortamlar için ayrı şekilde tasarlanmaktadır.
+                    
+                    Pek çok farklı tarz ile kombinleyebileceğiniz saat modellerini aynı zamanda sevdiklerinize hediye olarak da tercih edebilirsiniz. Sevdiğiniz kişileri mutlu edebileceğiniz ve onların sizin için ne kadar değerli olduğunu gösterebileceğiniz saatler arasında farklı zevklere ve stillere hitap edebilecek saat modelleri yer almaktadır.
+                    
+                    Dünyanın en ünlü ve seçkin markaları tarafından hayata geçirilen işlevsel özellikli tasarımlar arasından seçiminizi yaparak kendiniz veya sevdikleriniz için en ideal saat modellerine sizler de sahip olabilirsiniz.</h2>
+
+                  <footer>
+                    
+                        <td><img src ="marka1.png"> </td>
+                        <td><img src ="marka2.png"> </td>
+                        <td><img src ="marka3.png"> </td> 
+                        <td><img src ="marka4.png"> </td>
+                        <td><img src ="marka5.png"> </td>
+                        <td><img src ="marka6.png"> </td> 
+                        <td><img src ="marka7.png"> </td>
+                        <td><img src ="marka8.png"> </td>
+                        <td><img src ="marka9.png"> </td> 
+                        <td><img src ="marka10.png"> </td> 
+
+                    
+                     
+
+                  </footer>
+
+
+
+   </body>	
+</html>
