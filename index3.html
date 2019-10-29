@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Saat Modelleri | Saat Alışverişi ve Fiyatları için Konyalı Saat</title>
+      <link href="style.css" type="text/css" rel="stylesheet"/>
+   </head>	
+   <body>
+         
+         <script src ="https://unpkg.com/vue/dist/vue.js"></script>
+         
+
+         <div class="custom-padding">
+               <nav>
+                 <div class="logo"><img src="logo.png" alt ="logo" /></div>
+             
+                
+               </nav>
+             </div>
+             <div>
+                  <style type="text/css">
+            
+                     *{
+    background-color: white;
+                        
+    
+    border-radius:3px;
+    padding:  10px ;
+    text-align: center  ;
+    position: relative;;
+    margin: auto;}
+               
+                     
+               
+                     
+               
+                   </style>
+                  <div class="login header">
+                     
+                     <h1 class="header inner">
+                           <i class="fa fa-lock" aria-hidden="true"></i>
+                           Uye Girisi
+                     </h1>
+
+
+                  </div>
+               </div>
+               <div class="radio2">
+                     <input type="radio" name="radio2button" id="uyegirisi" />
+                     <label for="uyegirisi">
+                        Uye Girisi
+
+
+                     </label>
+                    
+                     
+               
+
+                  </div>
+                  <div class="radio1">
+                    
+                        
+                        
+                        <input type="radio" name="radio1button" id="uyeol" />
+                        <label for="uyeol">
+                           Uye Ol
+                        
+   
+   
+                        </label>
+                     </div>
+                     <div>
+                         <style type="text/css">
+                            *{
+                                
+    
+    margin-right: auto;
+    margin-left: auto;
+    
+
+
+                            }
+                            
+                            </style>
+                       
+                            <h2>Adiniz</h2>
+                            <input type="text" v-model="adiniz" />
+                          </div>
+                    
+                          <div>
+                          
+
+                       
+                                <h2>Soyadiniz</h2>
+                                <input type="text" v-model="Soyadiniz" />
+                              </div>      
+
+                  <div>
+                       
+                    <h2>E-Posta</h2>
+                    <input type="text" v-model="e=posta" />
+                  </div>
+                  <div>
+                    <h2>Sifre</h2>
+                    <input type="text" v-model="sifre" />
+                  </div>
+                  <div>
+                        <h2>Sifre Tekrar</h2>
+                        <input type="text" v-model="sifre" />
+                      </div>
+                 
+                 
+                     
+               
+
+                  
+                     <div class="checkbox">
+                        <input type="checkbox" name="checkbox1" id="BeniHatirla"/>
+                        <label for="BeniHatirla">
+                              Onemli kampanyalardan haberdar olmak istiyorum
+      
+      
+                           </label>
+                           <div><h2>
+                               Sozlesmeyi oku
+                           </h5></div>
+                     </div>
+                     <div>
+                    
+                           <input type="submit" value="Uye Girisi Yap!" v-on:click="submit" />
+                        </div>
+
+                     <div><h3>Hesabımı oluştur butonuna basarak Üyelik Sözleşmesi’ni, Aydınlatma ve Rıza Metni’ni, Gizlilik ve Çerez Politikası’nı okumuş ve kabul etmiş olacaksınız.</h3></div>
+                     <div><h2>
+                            Uyelik sozlesmesi
+                        </h5></div>
+                  </div>
+                  <div><h2>
+                        Aydinlatma ve riza metni
+                    </h5></div>
+              </div>
+              <div><h2>
+                    gizlilik ve cerez politikasi
+                </h5></div>
+          </div>
+
+                     
+                </div>
+
+
+               <div id="footer">
+                     {{name}}
+
+               </div>   
+                 
+
+              
+               
+               
+               <script src =main.js></script>
+               </body>
+</html>                        
